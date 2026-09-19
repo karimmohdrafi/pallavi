@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#120904"
+    >
+
+    <title>Happy Birthday Pallavi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         LOADING OVERLAY
+    ====================================================== -->
+
+    <div id="loadingOverlay">
+
+        <div class="loadingContent">
+
+            <div class="loadingRing"></div>
+
+            <p>
+                Preparing Something Special...
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN EXPERIENCE
+    ====================================================== -->
+
+    <main id="birthdayExperience">
+
+        <!-- Background Elements -->
+
+        <div
+            id="backgroundParticles"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            id="goldenGlow"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =================================================
+             AUDIO
+        ================================================== -->
+
+        <audio
+            id="bgMusic"
+            src="assets/music/music.mp3"
+            loop
+            preload="auto"
+        ></audio>
+
+        <audio
+            id="crackerSound"
+            src="assets/sounds/cracker.mp3"
+            preload="auto"
+        ></audio>
+
+
+        <!-- =================================================
+             SCENE 1 — GIFT
+        ================================================== -->
+
+        <section
+            class="scene active"
+            id="scene1"
+        >
+
+            <div class="giftContent">
+
+                <p class="giftTopText">
+                    Something Special Is Waiting For You
+                </p>
+
+
+                <div
+                    class="giftWrapper"
+                    id="giftWrapper"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open birthday gift"
+                >
+
+                    <div
+                        class="giftGlow"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div class="giftBox">
+
+                        <div class="giftBody">
+
+                            <div
+                                class="giftRibbonVertical"
+                            ></div>
+
+                            <div
+                                class="giftRibbonHorizontal"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="giftLid">
+
+                            <div
+                                class="giftRibbonVertical"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="giftBow">
+
+                            <span class="bowLeft"></span>
+                            <span class="bowRight"></span>
+                            <span class="bowCenter"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <h1 class="giftTitle">
+                    Hey Cutie!
+                </h1>
+
+
+                <p class="giftSubtitle">
+                    This gift is only for you...
+                </p>
+
+
+                <button
+                    class="goldButton"
+                    id="giftButton"
+                    type="button"
+                >
+                    Open It
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 2 — SECRET CODE
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene2"
+        >
+
+            <div class="secretCard">
+
+                <div class="secretIcon">
+                    🔐
+                </div>
+
+
+                <p class="sceneEyebrow">
+                    A Little Secret
+                </p>
+
+
+                <h2 style="font-family: 'Great Vibes', cursive;">
+                    Enter  The Secret Code
+                </h2>
+
+
+                <p class="secretHint">
+                    Only one special person knows it.
+                </p>
+
+
+                <div class="secretInputWrap">
+
+                    <input
+                        type="text"
+                        id="secretCode"
+                        placeholder="Enter code"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <button
+                        class="goldButton"
+                        id="secretSubmit"
+                        type="button"
+                    >
+                        Enter
+                    </button>
+
+                </div>
+
+
+                <p
+                    class="secretError"
+                    id="secretError"
+                >
+                    Hmm... That's not the secret code.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 3 — CELEBRATION
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene3"
+        >
+
+            <div class="celebrationContent">
+
+                <p class="celebrationSmall">
+                    You Got It!
+                </p>
+
+
+                <h1 class="celebrationTitle">
+                    Yay!
+                </h1>
+
+
+                <p class="celebrationSubtitle">
+                    Let The Celebration Begin!
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 4 — TRANSITION
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene4"
+        >
+
+            <div
+                class="transitionGlow"
+                aria-hidden="true"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 5 — FALLING CRACKER
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene5"
+        >
+
+            <div
+                class="crackerStage"
+                aria-hidden="true"
+            >
+
+                <div
+                    id="fallingCracker"
+                    class="fallingCracker"
+                >
+
+                    <div
+                        id="crackerFuse"
+                        class="crackerFuse"
+                    ></div>
+
+
+                    <div
+                        id="crackerFlame"
+                        class="crackerFlame"
+                    ></div>
+
+
+                    <div class="crackerBody">
+
+                        <div class="crackerTop"></div>
+
+                        <div
+                            class="crackerGoldBand bandOne"
+                        ></div>
+
+                        <div
+                            class="crackerGoldBand bandTwo"
+                        ></div>
+
+                        <div class="crackerCenterText">
+                            CELEBRATE
+                        </div>
+
+                        <div class="crackerBottom"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 6 — HUGE BLAST
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene6"
+        >
+
+            <div
+                id="blastFlash"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                id="blastCore"
+                aria-hidden="true"
+            ></div>
+
+
+            <canvas
+                id="blastParticlesCanvas"
+                aria-hidden="true"
+            ></canvas>
+
+
+            <div
+                id="paperBlastPieces"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                id="goldBlastPieces"
+                aria-hidden="true"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 7 — LETTER FORMATION
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene7"
+        >
+
+            <div
+                id="letterFormationParticles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                id="letterFormation"
+                class="letterFormation"
+            >
+
+                <div class="formationPaper">
+
+                    <div
+                        class="formationPaperLine"
+                    ></div>
+
+                    <div
+                        class="formationPaperLine"
+                    ></div>
+
+                    <div
+                        class="formationPaperLine"
+                    ></div>
+
+                    <div
+                        class="formationPaperLine"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 8 — FLORAL LETTER COVER
+             NO STICK / NO ROUND NOTE
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene8"
+        >
+
+            <div
+                class="letterCover"
+                id="letterCover"
+            >
+
+                <div class="coverPaper">
+
+
+                    <!-- TOP LEFT FLORAL DESIGN -->
+
+                    <div
+                        class="floralDecoration floralTopLeft"
+                    >
+
+                        <span
+                            class="floralLeaf leaf1"
+                        ></span>
+
+                        <span
+                            class="floralLeaf leaf2"
+                        ></span>
+
+                        <span
+                            class="floralLeaf leaf3"
+                        ></span>
+
+
+                        <span
+                            class="floralFlower smallFlower flower1"
+                        ></span>
+
+                        <span
+                            class="floralFlower smallFlower flower2"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- TOP RIGHT FLORAL DESIGN -->
+
+                    <div
+                        class="floralDecoration floralTopRight"
+                    >
+
+                        <span
+                            class="floralLeaf leaf1"
+                        ></span>
+
+                        <span
+                            class="floralLeaf leaf2"
+                        ></span>
+
+                        <span
+                            class="floralLeaf leaf3"
+                        ></span>
+
+
+                        <span
+                            class="floralFlower smallFlower flower1"
+                        ></span>
+
+                        <span
+                            class="floralFlower smallFlower flower2"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- CENTER FLOWER -->
+
+                    <div class="coverMainFlower">
+
+                        <span
+                            class="flowerPetal p1"
+                        ></span>
+
+                        <span
+                            class="flowerPetal p2"
+                        ></span>
+
+                        <span
+                            class="flowerPetal p3"
+                        ></span>
+
+                        <span
+                            class="flowerPetal p4"
+                        ></span>
+
+                        <span
+                            class="flowerPetal p5"
+                        ></span>
+
+                        <span
+                            class="flowerCenter"
+                        ></span>
+
+                    </div>
+
+
+                    <h2 class="coverTitle">
+                        A Special Message
+                    </h2>
+
+
+                    <p class="coverSubtitle">
+                        For A Special One
+                    </p>
+
+
+                    <div
+                        class="floralBottom"
+                    ></div>
+
+
+                    <button
+                        class="goldButton"
+                        id="openLetterButton"
+                        type="button"
+                    >
+                        Open Letter
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 9 — LETTER OPENING
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene9"
+        >
+
+            <div
+                class="letterPaper"
+                id="letterPaper"
+            >
+
+                <div class="paperTopFold"></div>
+
+                <div
+                    class="paperInsideGlow"
+                    aria-hidden="true"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 10 — ACTUAL LETTER
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene10"
+        >
+
+            <div
+                class="letterPaperContent"
+                id="letterPaperContent"
+            >
+
+                <div
+                    class="letterPaperBorder"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div
+                    class="letterScroll"
+                    id="letterScroll"
+                >
+
+                    <div
+                        class="letterInner"
+                        id="letterInner"
+                    >
+
+
+                        <h2
+                            class="letterHeading"
+                            id="letterHeading"
+                        >
+                            A Letter For You
+                        </h2>
+
+
+                        <p class="letterLine">
+                            Dear Pallavi,
+                        </p>
+
+
+                        <p class="letterLine">
+                            I just wanted to take a moment to tell you something special.
+                        </p>
+
+
+                        <p class="letterLine">
+                            You are not just a friend, but someone who makes every little moment brighter.
+                        </p>
+
+
+                        <p class="letterLine">
+                            Somehow, between all the laughs, silly conversations and countless little memories, you became someone really special to me.
+                        </p>
+
+
+                        <p class="letterLine">
+                            You are the kind of person who can make an ordinary day feel a little more beautiful just by being there.
+                        </p>
+
+
+                        <p class="letterLine">
+                            A best friend is not just someone who stays during the happy moments, but someone whose presence makes life feel lighter.
+                        </p>
+
+
+                        <p class="letterLine">
+                            And honestly, I am grateful for every memory, every conversation, every laugh, and every little moment we have shared.
+                        </p>
+
+
+                        <p class="letterLine">
+                            No matter how life changes, I hope you always remember how special you are.
+                        </p>
+
+
+                        <p class="letterLine">
+                            You deserve beautiful moments, genuine happiness, endless smiles, and people who truly value you.
+                        </p>
+
+
+                        <p class="letterLine">
+                            So today, I just want to say thank you for being you.
+                        </p>
+
+
+                        <p class="letterLine">
+                            Stay the same, Pallavi... because you are truly one of a kind.
+                        </p>
+
+
+                        <p class="letterClosing letterLine">
+                            With Lots of Warmth
+                        </p>
+
+
+                        <button
+                            class="goldButton"
+                            id="finallyButton"
+                            type="button"
+                        >
+                            Finally...
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 11 — FINALLY
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene11"
+        >
+
+            <div
+                id="finallySparkles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="finallyContent">
+
+                <p class="finallySmall">
+                    One Last Little Surprise
+                </p>
+
+
+                <h1>
+                    Finally...
+                </h1>
+
+
+                <button
+                    class="goldButton"
+                    id="finallyContinue"
+                    type="button"
+                >
+                    Continue
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 12 — HAPPY BIRTHDAY + PALLAVI PHOTOS
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene12"
+        >
+
+            <div
+                id="birthdaySparkles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="birthdayContent">
+
+                <p class="birthdaySmall">
+                    A Special Day For You
+                </p>
+
+
+                <h1 class="birthdayTitle" style="font-family: 'Great Vibes', cursive;">
+                    Happy Birthday
+                    <span>To You</span>
+                </h1>
+
+
+                <div class="birthdayPallavi">
+
+
+                    <!-- LEFT PHOTO -->
+
+                    <div
+                        class="birthdayPhoto leftPhoto"
+                    >
+
+                        <img
+                            src="assets/images/pallavi_left.jpeg"
+                            alt="Pallavi"
+                        >
+
+                    </div>
+
+
+                    <!-- PALLAVI NAME -->
+
+                    <div class="pallaviName">
+                        Pallavi
+                    </div>
+
+
+                    <!-- RIGHT PHOTO -->
+
+                    <div
+                        class="birthdayPhoto rightPhoto"
+                    >
+
+                        <img
+                            src="assets/images/pallavi_right.jpeg"
+                            alt="Pallavi"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 13 — SMILE
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene13"
+        >
+
+            <div
+                id="smileParticles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                id="smileGlow"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="smileContent">
+
+                <div
+                    id="glowingSmile"
+                    class="glowingSmile"
+                >
+                    🙂
+                </div>
+
+
+                <h2>
+                    Keep Smiling Always
+                </h2>
+
+
+                <p>
+                    You Deserve All The Happiness
+                    In The World
+                </p>
+
+
+                <span class="smileLove">
+                    Lots Of Love
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCENE 14 — CLEAN FINAL END
+        ================================================== -->
+
+        <section
+            class="scene"
+            id="scene14"
+        >
+
+            <div
+                id="finalGoldenParticles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="finalContent">
+
+                <p>
+                    A Little Moment,
+                    Just For You.
+                </p>
+
+
+                <h1>
+                    Keep shining.
+                    <br>
+                    Keep smiling.
+                </h1>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MAIN JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
